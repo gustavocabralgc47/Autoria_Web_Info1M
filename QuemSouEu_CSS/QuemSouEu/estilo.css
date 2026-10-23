@@ -1,0 +1,203 @@
+
+/* CONFIGURAÇÃO GERAL */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #2b2b2e;
+    color: #f2f2f2;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* TÍTULOS */
+.titulo-principal {
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 35px;
+}
+
+.titulo-secao {
+    color: #f2f2f2;
+    text-align: center;
+    margin: 45px 0 25px;
+    font-size: 1.8rem;
+}
+
+/* CARD DO PERSONAGEM */
+.card-personagem {
+    max-width: 850px;
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #f2f2f2;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.foto-perfil {
+    display: block;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+    padding: 8px;
+}
+
+.texto-personagem {
+    padding: 25px;
+}
+
+.texto-personagem p {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.texto-personagem p:last-child {
+    margin-bottom: 0;
+}
+
+/* CARDS DOS APLICATIVOS: SOMENTE LOGOS */
+.aplicativos {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.card-app {
+    min-height: 110px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s, background-color 0.25s;
+}
+
+.card-app img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.card-app:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* TABELA */
+.tabela-gostos {
+    max-width: 850px;
+    margin: 0 auto;
+    color: #f2f2f2;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.tabela-gostos th,
+.tabela-gostos td {
+    background-color: transparent;
+    color: #f2f2f2;
+    border-color: rgba(255, 255, 255, 0.15);
+    padding: 16px;
+}
+
+.tabela-gostos thead th {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* TABLET */
+@media (min-width: 576px) and (max-width: 991px) {
+    body {
+        padding: 0 15px;
+    }
+
+    .card-personagem {
+        max-width: 700px;
+    }
+
+    .foto-perfil {
+        height: 100%;
+        min-height: 300px;
+    }
+
+    .texto-personagem {
+        padding: 18px;
+    }
+
+    .titulo-principal {
+        font-size: 2.1rem;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 575px) {
+    body {
+        padding: 0 10px;
+    }
+
+    main.container {
+        padding-top: 30px !important;
+    }
+
+    .titulo-principal {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    .titulo-secao {
+        font-size: 1.5rem;
+        margin: 35px 0 20px;
+    }
+
+    /* Foto em cima e textos embaixo */
+    .foto-perfil {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+    }
+
+    .texto-personagem {
+        padding: 15px;
+    }
+
+    .texto-personagem p {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    /* Cards dos aplicativos em coluna */
+    .aplicativos {
+        flex-direction: column;
+    }
+
+    .aplicativos > .col {
+        width: 100%;
+    }
+
+    .card-app {
+        min-height: 90px;
+    }
+
+    .card-app img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tabela-gostos th,
+    .tabela-gostos td {
+        padding: 12px 10px;
+        font-size: 0.95rem;
+    }
+}
